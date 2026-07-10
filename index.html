@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>아, 뭐 보냐</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+
+<main class="app">
+
+  <!-- ===================== HOME ===================== -->
+  <section id="screen-home" class="screen active">
+    <div class="logo-wrap">
+      <img class="logo-hero" src="assets/logo-hero.jpg" alt="[아, 뭐 보냐]" />
+    </div>
+
+    <p class="tagline">스크롤은 그만, 쾌속 취향 발견기!</p>
+
+    <img class="topi topi-home" src="assets/topi-tired.png" alt="지친 토피" />
+
+    <p class="comfort-line">오늘도 뭐 볼지 고르다가 지쳤지. 그거 하나면 됐어.</p>
+
+    <button class="btn btn-primary btn-start" data-nav="check">
+      고민 그만, 하나만 줘
+    </button>
+  </section>
+
+  <!-- ===================== CHECK ===================== -->
+  <section id="screen-check" class="screen">
+    <div class="progress">
+      <span class="dot" data-step="1"></span>
+      <span class="dot" data-step="2"></span>
+    </div>
+
+    <!-- Q1: mood -->
+    <div class="question active" id="q1">
+      <h2 class="q-title">지금 기분은?</h2>
+      <div class="mood-grid">
+        <button class="mood-card" data-mood="happy">
+          <img src="assets/topi-happy.png" alt="기쁨" />
+          <span>좋음</span>
+        </button>
+        <button class="mood-card" data-mood="neutral">
+          <img src="assets/topi-neutral.png" alt="무난" />
+          <span>무난</span>
+        </button>
+        <button class="mood-card" data-mood="tired">
+          <img src="assets/topi-tired.png" alt="피곤" />
+          <span>피곤</span>
+        </button>
+        <button class="mood-card" data-mood="annoyed">
+          <img src="assets/topi-annoyed.png" alt="짜증" />
+          <span>짜증</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Q2: weight -->
+    <div class="question" id="q2">
+      <h2 class="q-title">얼마나 가볍게 보고 싶어?</h2>
+      <div class="weight-list">
+        <button class="weight-card" data-weight="light">
+          <span class="w-emoji">😆</span>
+          <span class="w-label">가볍게 킬킬대고 싶음</span>
+        </button>
+        <button class="weight-card" data-weight="zone">
+          <span class="w-emoji">😶</span>
+          <span class="w-label">그냥 멍 때리고 싶음</span>
+        </button>
+        <button class="weight-card" data-weight="deep">
+          <span class="w-emoji">🧐</span>
+          <span class="w-label">몰입해서 보고 싶음</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULT ===================== -->
+  <section id="screen-result" class="screen">
+    <p class="result-eyebrow">오늘의 한 방</p>
+
+    <div class="video-card">
+      <div class="thumb" id="result-thumb">
+        <span class="play-badge">▶</span>
+      </div>
+      <p class="video-title" id="result-title">영상 제목</p>
+      <p class="video-channel" id="result-channel">채널명</p>
+    </div>
+
+    <div class="topi-say">
+      <img class="topi topi-result" src="assets/topi-neutral.png" alt="토피" />
+      <div class="bubble" id="result-bubble">오키, 이거 추천함~</div>
+    </div>
+
+    <div class="result-buttons">
+      <button class="btn btn-primary" id="btn-watch">이거 볼래</button>
+      <button class="btn btn-secondary" id="btn-reroll">다른 거</button>
+    </div>
+
+    <button class="btn btn-ghost" data-nav="home">처음으로</button>
+  </section>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
