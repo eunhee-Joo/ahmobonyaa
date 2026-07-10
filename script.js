@@ -102,6 +102,10 @@ function renderResult(isReroll) {
 
 document.getElementById("btn-reroll").addEventListener("click", () => {
   renderResult(true);
+  const card = document.querySelector(".video-card");
+  card.classList.remove("bounce");
+  void card.offsetWidth; // restart animation
+  card.classList.add("bounce");
 });
 
 document.getElementById("btn-watch").addEventListener("click", () => {

@@ -390,6 +390,17 @@ button {
     0 8px 0 rgba(0, 0, 0, 0.22);
 }
 
+/* squish on reroll, like a fresh lump of clay pressed into place */
+.video-card.bounce {
+  animation: card-squish 260ms ease;
+}
+@keyframes card-squish {
+  0% { transform: scale(1); }
+  35% { transform: scale(0.94, 1.04); }
+  65% { transform: scale(1.03, 0.97); }
+  100% { transform: scale(1); }
+}
+
 .video-card::after {
   content: "";
   position: absolute;
